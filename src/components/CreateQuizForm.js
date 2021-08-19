@@ -214,8 +214,8 @@ function CreateQuizForm() {
   };
 
   const addTag = () => {
-    if (tag.trim() !== "" && !tags.includes(tag.trim())) {
-      setTags((prevTags) => [...prevTags, tag.trim()]);
+    if (tag.trim() !== "" && !tags.includes(tag.trim().toLowerCase())) {
+      setTags((prevTags) => [...prevTags, tag.trim().toLowerCase()]);
     }
     setTag("");
   };
